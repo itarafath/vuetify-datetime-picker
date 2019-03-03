@@ -9,8 +9,10 @@
                 slot="activator"
                 :label="label"
                 :prepend-icon="prependIcon"
+                :data-vv-name="fieldName"
                 :value="formattedDatetime"
                 :disabled="disabled"
+                :error-messages="errors.collect(fieldName)"
                 readonly>
         </v-text-field>
 
@@ -113,6 +115,10 @@
         default: false
       },
       prependIcon: {
+        type: String,
+        default: ''
+      },
+      fieldName: {
         type: String,
         default: ''
       }
