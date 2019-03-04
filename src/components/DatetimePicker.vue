@@ -13,7 +13,7 @@
                 :value="formattedDatetime"
                 :disabled="disabled"
                 :error-messages="errors.collect(fieldName)"
-                v-validate="validate"
+                v-validate="validateRule"
                 readonly>
         </v-text-field>
 
@@ -123,7 +123,7 @@
         type: String,
         default: ''
       },
-      validate: {
+      validateRule: {
         type: String,
         default: ''
       }
