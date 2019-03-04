@@ -14,6 +14,7 @@
                 :disabled="disabled"
                 :error-messages="errors.collect(fieldName)"
                 v-validate="validateRule"
+                :ref="refText"
                 readonly>
         </v-text-field>
 
@@ -124,6 +125,10 @@
         default: ''
       },
       validateRule: {
+        type: String,
+        default: ''
+      },
+      refText: {
         type: String,
         default: ''
       }
