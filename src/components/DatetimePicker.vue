@@ -15,6 +15,7 @@
                 :error-messages="errors.collect(fieldName)"
                 v-validate="validateRule"
                 :ref="refText"
+                @change="onChange"
                 readonly>
         </v-text-field>
 
@@ -131,6 +132,9 @@
       refText: {
         type: String,
         default: ''
+      },
+      onChange: {
+        type: Object
       }
     },
     data () {
