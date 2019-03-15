@@ -134,7 +134,8 @@
         default: ''
       },
       onChange: {
-        type: Object
+        type: Object,
+        default: () => {}
       }
     },
     data () {
