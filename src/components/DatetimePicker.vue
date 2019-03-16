@@ -132,10 +132,6 @@
       refText: {
         type: String,
         default: ''
-      },
-      onChange: {
-        type: Object,
-        default: () => {}
       }
     },
     data () {
@@ -202,6 +198,9 @@
         this.$refs.timer.selectingHour = true
 
         this.$emit('input', null)
+      },
+      onChange () {
+        this.$emit('update')
       }
     }
   }
